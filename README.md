@@ -10,15 +10,28 @@ Derive a mask depicting roadways from a 3200 x 4800 satellite image.
 This is an image segmentation problem requiring pixel-wise binary classification of the input image resulting in a two-class output image. A fully connected convolutional network (FCN) was selected to solve this problem as it is suitable for use with a small number of training examples.
 
 **Solution Architecture:**  
-U-net is a fast implementation of an FCN which provides good segementation capability using a symettrical downsampling and upsampling network of layers.
-
+U-net is a fast implementation of an FCN which provides good segementation capability using a symettrical downsampling and upsampling network of layers. A pre-existing open-source implemtation (tf_unet) was utilised for this purpose.
 
 
 **Optimisation:**  
-- Input images were scaled from (3200, 4800) down to (400, 600) to circumvent exhausting resource constraints.
+- Input images were scaled from (3200, 4800) down to (400, 600) to circumvent resource constraints.
 - The number of layers in the unet was increased from 3 to 5 which was the resource maximum. This resutled in an average 2-3% decrease in average error after 50 epochs.
 - Batch normalization was added to the convolutional layer to scale and normalise the input arrays resulting in faster convergence.
--
+
+
+# Results  
+Training occured over 64 iterations across 50 epochs. The network was trained using an RTX2070 GPU in approximately 90 minutes resulting in an average accruacy of 92%.
+
+
+
+**Improvements**
+In order to increase the power of the network, it would be beneficial to train on mulitple GPUs. Horovod - a C++ library developed by Uber for distributed tensorflow operations (https://github.com/uber/horovod) - would be worth investigating to this end. 
+
+An imploenmetation of U-net with iHorovod integration built-in would be a logical choice for testing alongside the proposed solution.
+https://github.com/ankurhanda/tf-unet
+
+
+
 
 
 
