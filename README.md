@@ -1,4 +1,4 @@
-# RoadDetection
+# Road Detection
 Detection of roadways from satellite data  
 Data provided: 45 training examples, 10 test images  
 
