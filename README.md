@@ -22,7 +22,7 @@ U-net is a fast implementation of an FCN which provides good segementation capab
 # Results  
 Training occured over 64 iterations across 50 epochs. The network was trained using an RTX2070 GPU in approximately 90 minutes resulting in an average accruacy of 92%.
 
-![Alt text](Users\Michael\PycharmProjects\RoadDetection\results?raw=true "Title")
+![Alt text](https://github.com/NumbaCruncha/RoadDetection/issues/2#issue-393711804?raw=true "Title")
 
 
 
