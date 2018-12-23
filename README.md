@@ -31,7 +31,7 @@ Training occured over 64 iterations across 50 epochs. The network was trained us
 **Improvements**
 In order to increase the power of the network, it would be beneficial to train on mulitple GPUs. Horovod - a C++ library developed by Uber for distributed tensorflow operations (https://github.com/uber/horovod) - would be worth investigating to this end. 
 
-An imploenmetation of U-net with iHorovod integration built-in would be a logical choice for testing alongside the proposed solution.
+An implementation of U-net with iHorovod integration built-in would be a logical choice for testing alongside the proposed solution.
 https://github.com/ankurhanda/tf-unet
 
 
