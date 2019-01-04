@@ -3,14 +3,14 @@ Detection of roadways within satellite data
 Data provided: 45 training examples, 10 test images  
 
 # Problem Statement
-Derive a mask depicting roadways from a 3200 x 4800 satellite image. 
+Derive a mask depicting roadways from each 3200 x 4800 satellite image tile.
 
 
 # Methodology
 This is an image segmentation problem requiring pixel-wise binary classification of the input image resulting in a two-class output image. An extension of a fully connected convolutional network (FCN) was selected to solve this problem as it is suitable for use with a small number of training examples.
 
 **Solution Architecture:**  
-U-net provides good segementation capability using a symettrical downsampling and upsampling network of layers. A pre-existing open-source implemtation (tf_unet) was utilised for this purpose.
+U-net provides good segementation capability using a symmetrical downsampling and upsampling network of layers which is more efficient than an FCN. A pre-existing open-source implemtation (tf_unet) was utilised for this purpose.
 
 **Optimisation:**  
 - Input images were scaled from (3200, 4800) down to (400, 600) to circumvent resource constraints.
@@ -18,7 +18,7 @@ U-net provides good segementation capability using a symettrical downsampling an
 - Batch normalization was added to the convolutional layer to scale and normalise the input arrays resulting in faster convergence.
 
 # Results  
-Training occured over 64 iterations across 50 epochs. The network was trained using an RTX2070 GPU in approximately 90 minutes resulting in an average accruacy of 98%.
+Training occured over 64 iterations across 50 epochs. The network was trained using an RTX2070 GPU in approximately 90 minutes resulting in an average accuracy of 98%.
 
 
 ![Alt text](https://user-images.githubusercontent.com/14899131/50678063-cd13a680-1061-11e9-82e9-ec0e4e1e4afd.png "Training Accuracy")
@@ -29,9 +29,9 @@ Training occured over 64 iterations across 50 epochs. The network was trained us
 
 
 **Improvements**
-It would be desirable to avoid downsampling the training images in order to capture more details during learning, as welll as to output a mask at the correct resolution as the training images.
+It would be desirable to avoid downsampling the training images in order to capture more details during learning, as well as to output a mask at the same resolution as the training images.
 
-In order to increase the power of the network, it would be beneficial to train on mulitple GPUs. Horovod - a C++ library developed by Uber for distributed tensorflow operations (https://github.com/uber/horovod) - would be worth investigating to this end. 
+In order to increase the power of the network, it would be beneficial to train on multiple GPUs. Horovod - a C++ library developed by Uber for distributed tensorflow operations (https://github.com/uber/horovod) - would be worth investigating to this end. 
 
 An implementation of U-net with iHorovod integration built-in would be a logical choice for testing alongside the proposed solution.
 https://github.com/ankurhanda/tf-unet
