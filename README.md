@@ -1,5 +1,5 @@
 # Road Detection
-Detection of roadways from satellite data  
+Detection of roadways within satellite data  
 Data provided: 45 training examples, 10 test images  
 
 # Problem Statement
@@ -14,7 +14,7 @@ U-net provides good segementation capability using a symettrical downsampling an
 
 **Optimisation:**  
 - Input images were scaled from (3200, 4800) down to (400, 600) to circumvent resource constraints.
-- The number of layers in the unet was increased from 3 to 5 which was the resource maximum. This resutled in an average 2-3% decrease in average error after 50 epochs.
+- The number of layers in the unet was set 4 with 48 features, which provided good performance. 
 - Batch normalization was added to the convolutional layer to scale and normalise the input arrays resulting in faster convergence.
 
 # Results  
@@ -29,6 +29,8 @@ Training occured over 64 iterations across 50 epochs. The network was trained us
 
 
 **Improvements**
+It would be desirable to avoid downsampling the training images in order to capture more details during learning, as welll as to output a mask at the correct resolution as the training images.
+
 In order to increase the power of the network, it would be beneficial to train on mulitple GPUs. Horovod - a C++ library developed by Uber for distributed tensorflow operations (https://github.com/uber/horovod) - would be worth investigating to this end. 
 
 An implementation of U-net with iHorovod integration built-in would be a logical choice for testing alongside the proposed solution.
