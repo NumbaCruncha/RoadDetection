@@ -25,7 +25,9 @@ Training occured over 64 iterations across 50 epochs. The network was trained us
 
 ![Alt text](https://user-images.githubusercontent.com/14899131/50678063-cd13a680-1061-11e9-82e9-ec0e4e1e4afd.png "Training Accuracy")
 
-![Alt text](https://user-images.githubusercontent.com/14899131/50379657-23710480-06b4-11e9-9f21-0a253d218e80.png?raw=true "Test Result")
+
+![Alt text](https://user-images.githubusercontent.com/14899131/50678099-00eecc00-1062-11e9-8ab5-d2d60b798563.png "Training Result")
+![Alt text](https://user-images.githubusercontent.com/14899131/50678105-077d4380-1062-11e9-9275-719eb4785c68.png "Test Result")
 
 
 
