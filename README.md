@@ -30,7 +30,7 @@ Training occured over 64 iterations across 50 epochs. The network was trained us
 ![Alt text](https://user-images.githubusercontent.com/14899131/50678099-00eecc00-1062-11e9-8ab5-d2d60b798563.png "Training Result")
 
 
-**Creating a mask from the test set using the pre-trained model (no ground truth mask)** 
+**Creating a mask from the test set using the pre-trained model (no ground truth mask):** 
 ![Alt text](https://user-images.githubusercontent.com/14899131/50678105-077d4380-1062-11e9-9275-719eb4785c68.png "Test Result")
 
 
