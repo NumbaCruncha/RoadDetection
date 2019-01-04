@@ -12,15 +12,13 @@ This is an image segmentation problem requiring pixel-wise binary classification
 **Solution Architecture:**  
 U-net is a fast implementation of an FCN which provides good segementation capability using a symettrical downsampling and upsampling network of layers. A pre-existing open-source implemtation (tf_unet) was utilised for this purpose.
 
-
 **Optimisation:**  
 - Input images were scaled from (3200, 4800) down to (400, 600) to circumvent resource constraints.
 - The number of layers in the unet was increased from 3 to 5 which was the resource maximum. This resutled in an average 2-3% decrease in average error after 50 epochs.
 - Batch normalization was added to the convolutional layer to scale and normalise the input arrays resulting in faster convergence.
 
-
 # Results  
-Training occured over 64 iterations across 50 epochs. The network was trained using an RTX2070 GPU in approximately 90 minutes resulting in an average accruacy of 92%.
+Training occured over 64 iterations across 50 epochs. The network was trained using an RTX2070 GPU in approximately 90 minutes resulting in an average accruacy of 98%.
 
 
 ![Alt text](https://user-images.githubusercontent.com/14899131/50678063-cd13a680-1061-11e9-82e9-ec0e4e1e4afd.png "Training Accuracy")
@@ -28,7 +26,6 @@ Training occured over 64 iterations across 50 epochs. The network was trained us
 
 ![Alt text](https://user-images.githubusercontent.com/14899131/50678099-00eecc00-1062-11e9-8ab5-d2d60b798563.png "Training Result")
 ![Alt text](https://user-images.githubusercontent.com/14899131/50678105-077d4380-1062-11e9-9275-719eb4785c68.png "Test Result")
-
 
 
 **Improvements**
