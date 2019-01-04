@@ -31,7 +31,7 @@ Training occured over 64 iterations across 50 epochs. The network was trained us
 **Improvements:**  
 It would be desirable to avoid downsampling the training images in order to capture more details during learning, as well as to output a mask at the same resolution as the training images.
 
-In order to increase the power of the network, it would be beneficial to train on multiple GPUs. Horovod - a C++ library developed by Uber for distributed tensorflow operations (https://github.com/uber/horovod) - would be worth investigating to this end. 
+In order to increase the power of the network, it would be beneficial to train on multiple GPUs. Horovod - a C++ library developed by Uber for distributed tensorflow operations (https://github.com/uber/horovod) would be worth investigating to this end. 
 
 An implementation of U-net with iHorovod integration built-in would be a logical choice for testing alongside the proposed solution.
 https://github.com/ankurhanda/tf-unet
