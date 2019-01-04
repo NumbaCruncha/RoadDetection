@@ -7,7 +7,8 @@ Derive a mask depicting roadways from each 3200 x 4800 satellite image tile.
 
 
 # Methodology
-This is an image segmentation problem requiring pixel-wise binary classification of the input image resulting in a two-class output image. An extension of a fully connected convolutional network (FCN) was selected to solve this problem as it is suitable for use with a small number of training examples.
+This is an image segmentation problem requiring pixel-wise binary classification of the input image resulting in a two-class output image. An extension of a fully connected convolutional network (FCN) was selected to solve this problem as it is suitable for use with a small number of training examples. A total of 8 false positives were removed from the dataset during preprocessing.
+
 
 **Solution Architecture:**  
 U-net provides good segementation capability using a symmetrical downsampling and upsampling network of layers which is more efficient than an FCN. A pre-existing open-source implementation (tf_unet) was utilised for this purpose.
