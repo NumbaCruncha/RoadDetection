@@ -22,10 +22,15 @@ U-net provides good segementation capability using a symmetrical downsampling an
 Training occured over 64 iterations across 50 epochs. The network was trained using an RTX2070 GPU in approximately 90 minutes resulting in an average accuracy of 98%.
 
 
+**Model training Accuracy:** 
 ![Alt text](https://user-images.githubusercontent.com/14899131/50678063-cd13a680-1061-11e9-82e9-ec0e4e1e4afd.png "Training Accuracy")
 
 
+**Training example using ground truth mask:** 
 ![Alt text](https://user-images.githubusercontent.com/14899131/50678099-00eecc00-1062-11e9-8ab5-d2d60b798563.png "Training Result")
+
+
+**Test example - no ground truth mask:** 
 ![Alt text](https://user-images.githubusercontent.com/14899131/50678105-077d4380-1062-11e9-9275-719eb4785c68.png "Test Result")
 
 
