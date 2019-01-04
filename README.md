@@ -23,7 +23,7 @@ U-net is a fast implementation of an FCN which provides good segementation capab
 Training occured over 64 iterations across 50 epochs. The network was trained using an RTX2070 GPU in approximately 90 minutes resulting in an average accruacy of 92%.
 
 
-![Alt text](https://user-images.githubusercontent.com/14899131/50379633-9928a080-06b3-11e9-8d0b-7f88bc6cacbb.png?raw=true "Training Accuracy")
+![Alt text](https://user-images.githubusercontent.com/14899131/50678063-cd13a680-1061-11e9-82e9-ec0e4e1e4afd.png "Training Accuracy")
 
 ![Alt text](https://user-images.githubusercontent.com/14899131/50379657-23710480-06b4-11e9-9f21-0a253d218e80.png?raw=true "Test Result")
 
